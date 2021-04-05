@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;"> -->
+
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <!-- Color theme for statusbar -->
+    <!-- <meta name="theme-color" content="#2196f3"> -->
+    <meta name="color-scheme" content="light dark">
+
+    <!-- Your app title -->
+    <title>My App</title>
+    <!-- Path to Framework7 Library CSS -->
+    <link rel="stylesheet" href="lib/framework7/framework7-bundle.min.css">
+    <!-- Path to icons -->
+    <link rel="stylesheet" href="css/icons.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="css/app.css">
+    <!-- Mapa -->
+</head>
+
+<body>
+    <div id="app">
+        <!-- Statusbar overlay -->
+        <div class="statusbar"></div>
+    
+        <!-- Your main view, should have "view-main" class -->
+        <div class="view view-main">
+       
+            <!-- Top Navbar -->
+            <!-- <div class="navbar">
+                <div class="navbar-bg"></div>
+                <div class="navbar-inner">
+                    <div class="left"><i class="icon icon-back"></i></div>
+                    <div class="title">Page Title</div>
+                    <div class="right"><i class="icon icon-forward"></i></div>
+                </div>
+            </div> -->
+    
+            <!-- Toolbar -->
+            <!-- <div class="toolbar toolbar-bottom">
+                <div class="toolbar-inner"> -->
+                <!-- Toolbar links -->
+                <!-- <a href="#" class="link">Link 1</a>
+                <a href="#" class="link">Link 2</a>
+                </div>
+            </div> -->
+        
+        <!-- Initial Page, "data-name" contains page name -->
+            <div data-name="index" class="page">
+                <!-- Scrollable page content -->
+                <div class="page-content">
+
+                    <div class="centrarimg">
+
+                        <img src="img/logo_ya.png" alt="logo de la empresa">
+
+                    </div>
+                    <!-- Solucionar esto que me queda XXL -->
+                    <div class="block">
+                        <a href="/registro/" class="button button-fill login-screen-open color-red" data-login-screen=".login-screen">¡Quiero registrarme!</a>
+                    </div>
+                    <div class="block">
+                        <a href="/login/" id="btnlogin" class="col button button-outline login-screen:open color-red" data-login-screen=".login-screen">¡Estoy registrad@!</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Inicio de FireBases -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+    <!-- Autenticación -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-auth.js"></script>
+    <!--Base de Datos-->
+    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-firestore.js"></script>
+    <!-- Storage de img pa. -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-storage.js"></script>
+
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use -->
+    <!-- https://firebase.google.com/docs/web/setup#available-libraries -->
+
+
+    <script>
+   // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyDnkkInlBzy97M7Vpc_oV_bh5s3eKg-WJs",
+        authDomain: "ya--miprimeraaplicacionmobile.firebaseapp.com",
+        projectId: "ya--miprimeraaplicacionmobile",
+        storageBucket: "ya--miprimeraaplicacionmobile.appspot.com",
+        messagingSenderId: "470910768269",
+        appId: "1:470910768269:web:9f4975f795668d5b617ec4"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    </script>
+
+
+<!-- Script de la transición ver si funciona bien -->
+<!-- <script>
+
+      $('.login-screen').on('loginscreen:open', function (e) {
+        console.log('Login screen open')
+      });
+      $('.login-screen').on('loginscreen:opened', function (e) {
+        console.log('Login screen opened')
+      });
+      $('.login-screen').on('loginscreen:close', function (e) {
+        console.log('Login screen close')
+      });
+      $('.login-screen').on('loginscreen:closed', function (e) {
+        console.log('Login screen closed')
+      });
+
+  </script> -->
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="lib/framework7/framework7-bundle.min.js"></script>
+    <script type="text/javascript" src="js/my-app.js"></script>
+
+    <!-- MAPS -->
+    
+    <!-- General Maps -->
+    <script src="https://js.api.here.com/v3/3.1/mapsjs-core.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://js.api.here.com/v3/3.1/mapsjs-service.js" type="text/javascript" charset="utf-8"></script>
+    
+    <!-- Events Maps -->
+    <script src="https://js.api.here.com/v3/3.1/mapsjs-mapevents.js" type="text/javascript" charset="utf-8"></script>
+    
+    <!-- UI Maps -->
+    <script src="https://js.api.here.com/v3/3.1/mapsjs-ui.js" type="text/javascript" charset="utf-8"></script>
+    <link rel="stylesheet" type="text/css" href="https://js.api.here.com/v3/3.1/mapsjs-ui.css" />
+
+
+</body>
+
+</html>

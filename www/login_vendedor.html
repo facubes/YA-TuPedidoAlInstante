@@ -1,0 +1,181 @@
+<div class="page" data-name="login_vendedor">
+
+        <div class="page">
+          <div class="navbar">
+            <div class="navbar-bg"></div>
+            <div class="navbar-inner  justify-content-center">
+              <div class="title sheet-open" data-sheet=".my-sheet-swipe-to-step" href="#" > <p> Mis Pedidos </p></div>
+              <!-- <p><a class="button button-fill sheet-open" href="#" data-sheet=".my-sheet-swipe-to-step">Swipe To Step</a> -->
+
+              <div class="sheet-modal my-sheet-swipe-to-step" style="height:auto; --f7-sheet-bg-color: #fff;">
+                <div class="sheet-modal-inner">
+                  <div class="sheet-modal-swipe-step">
+                    <div class="display-flex padding justify-content-space-between align-items-center">
+                    </div>
+                    <div class="padding-horizontal padding-bottom">
+                      <a class="button button-large button-fill color-red sheet-close">Cerrar</a>
+                    </div>
+                  </div>
+                  <div class="block-title block-title-medium margin-top">TUS PEDIDOS:</div>
+                  <div class="list no-hairlines">
+                    <ul>
+                      <li class="item-content">
+                        <div class="item-inner">
+                          <div class="item-title" id="item_pedido_1">  </div>
+                          <div class="item-after text-color-black"> <b id="Direccion_Cliente_1">  </b></div>
+                        </div>
+                      </li>
+              
+                      <li class="item-content">
+                        <div class="item-inner">
+                          <div class="item-title" id="item_pedido_2"></div>
+                          <div class="item-after text-color-black"><b id="Direccion_Cliente_2"> </b></div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+          <div class="page-content">
+
+            <div class="block-title" id="nombre_vendor_login"> </div>
+
+            <!-- <div class="block-title">Facebook Cards</div> -->
+           <!-- PUBLICACIÓN 1 - ASÍ SE MUESTRA  -->
+
+           <!-- prueba duplicar -->
+           <!-- <button id="duplicar_boton" class="col button button-outline color-bordo" style=" width: 50%; margin: 0 auto;">DUPLICAR PUB</button>
+
+           <button id="duplicar_prueba" class="col button button-outline color-bordo" style=" width: 50%; margin: 0 auto;">prueba</button> -->
+           
+           <div>
+            
+
+            <div class="card demo-facebook-card">
+              <div class="card-header">
+                <div class="demo-facebook-avatar"><img src="img/orange_empanadas_plantas.jpg"
+                    width="34" height="34" /></div>
+                <div class="demo-facebook-name" id="nombre_negocio">NOMBRE DEL LOCAL</div>
+                <div class="demo-facebook-date" id="direccion_vendedor" >DIRECCIÓN DEL LOCAL </div>
+              </div>
+              
+
+                <div class="text-editor text-editor-init text-editor-resizable card-content card-content-padding" data-placeholder="Ingrese su descripción aquí..."
+                data-buttons='["bold", "italic", "underline", "strikeThrough"]'>
+                <div class="text-editor-content" id="descripcion_vendedor" contenteditable="true"> Acá va la descripción.. </div>
+<!-- https://cdn.framework7.io/placeholder/nature-1000x700-8.jpg -->
+                <!-- <p>PERO MIRATE LA TERRIBLE ZAPPI QUE TENEMOS PARA EL DÍA DE LA FECHA E' </p> -->
+                <img src="" id="foto_subida" width="100%" />
+                <!--  -->
+                <br>
+                <p class= "button button-raised button-fill color-red width-25 text-editor-resizable" contenteditable="true" text-color-white" id="precio_vendedor"> Precio </p>
+
+              <br>
+              <label id="subir_img" class="button button-raised button-fill color-red"> SELECCIONE UNA IMAGEN
+                <input type="file" style="display:none" name="algo" id="algo" class="listInput outline">
+              </label>
+              </div>
+             
+<!--  <input type="hidden" id="fotos" type="file"> -->
+
+              <div class="card-footer"><a href="#" class="link" id="editar_foto" > Editar Foto</a><a href="#" class="link" id="editar_publicacion" >Editar Publicación</a><a href="#" class="link" id="editar_precio">Editar Precio</a></div>
+      
+          </div>
+
+
+        </div>
+
+            <!-- PUBLICACIÓN 2 - ASÍ SE MUESTRA  -->
+            <div class="card demo-facebook-card">
+              <div class="card-header">
+                <div class="demo-facebook-avatar"><img src="img/red.png"
+                    width="34" height="34" /></div>
+                <div class="demo-facebook-name" id="nombre_negocio">NOMBRE DEL LOCAL</div>
+                <div class="demo-facebook-date" id="direccion_vendedor" >DIRECCIÓN DEL LOCAL </div>
+              </div>
+
+                <div class="text-editor text-editor-init text-editor-resizable card-content card-content-padding" data-placeholder="Ingrese su descripción aquí..."
+                data-buttons='["bold", "italic", "underline", "strikeThrough"]'>
+                <div class="text-editor-content" id="descripcion_vendedor_2" contenteditable="true"> Acá va la descripción.. </div>
+
+                <img src="" id="foto_subida2" width="100%" />
+                <br>
+                <p class= "button button-raised button-fill color-red width-25 text-editor-resizable" contenteditable="true" text-color-white" id="precio_vendedor_2"> Precio </p>
+
+                <br>
+                <label id="subir_img_2" class="button button-raised button-fill color-red"> SELECCIONE UNA IMAGEN
+                  <input type="file" style="display:none" name="algo" id="algo_2" class="listInput outline">
+                </label>
+              </div>
+              <div class="card-footer"><a href="#" class="link" id="editar_foto2">Editar Foto</a><a href="#" class="link" id="editar_publicacion2" >Editar Publicación</a><a href="#" class="link" id="editar_precio2">Editar Precio</a></div>
+            </div>
+            <br>
+            <br>
+            <div class="block">
+            <button id="cerrar_sesion" class="col button button-outline color-bordo" style=" width: 50%; margin: 0 auto;">Cerrar Sesión</button>
+            </div>
+
+
+
+            </div>
+
+
+      <style>
+        .demo-card-header-pic .card-header {
+          height: 40vw;
+          background-size: cover;
+          background-position: center;
+          color: #fff;
+        }
+      
+        .demo-card-header-pic .card-content-padding .date {
+          color: #8e8e93;
+        }
+      
+        .demo-facebook-card .card-header {
+          display: block;
+          padding: 10px;
+        }
+      
+        .demo-facebook-card .demo-facebook-avatar {
+          float: left;
+        }
+      
+        .demo-facebook-card .demo-facebook-name {
+          margin-left: 44px;
+          font-size: 14px;
+          font-weight: 500;
+        }
+      
+        .demo-facebook-card .demo-facebook-date {
+          margin-left: 44px;
+          font-size: 13px;
+          color: #8e8e93;
+        }
+      
+        .demo-facebook-card .card-footer {
+          background: #fafafa;
+        }
+      
+        .demo-facebook-card .card-footer a {
+          color: #81848b;
+          font-weight: 500;
+        }
+      
+        .demo-facebook-card .card-content img {
+          display: block;
+        }
+      
+        .demo-facebook-card .card-content-padding {
+          padding: 15px 10px;
+        }
+      
+        .demo-facebook-card .card-content-padding .likes {
+          color: #8e8e93;
+        }
+      </style>
+</div>
